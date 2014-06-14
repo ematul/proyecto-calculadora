@@ -6,15 +6,20 @@
 
 package InterfazGrafica;
 
+import calculadora.Resultado;
+
 /**
  *
  * @author Gerson
  */
 public class Calculador implements Despliegue{
-
+    Resultado resultado = new  Resultado();
+    
     @Override
     public float mostrarResultado() {
-         return 0;
+        //float r = resultado.getResultado();
+        //return r;
+        return 0;
     }
 
     @Override
@@ -24,6 +29,32 @@ public class Calculador implements Despliegue{
 
     @Override
     public void decomponerCadena(String op) {
+        char c = op.charAt(0);
+        if(c == 'S'){
+            int op1 = op.charAt(4);
+            resultado.setOperador('s');
+            resultado.setOperando(op1);
+        }
+        if(c == 'C'){
+           int op1 = op.charAt(4);
+            resultado.setOperador('c');
+            resultado.setOperando(op1);
+        }
+        if(c == 'T'){
+            int op1 = op.charAt(4);
+            resultado.setOperador('t');
+            resultado.setOperando(op1);
+        }
+        if(c != 'S' && c != 'C' && c != 'T')
+        {
+            int op1 = c;
+            char oper = op.charAt(1);
+            int op2 = op.charAt(2);
+            
+            resultado.setOperando(1);
+            resultado.setOperador(oper);
+            resultado.setOperando(op2);
+        }
         
     }
 

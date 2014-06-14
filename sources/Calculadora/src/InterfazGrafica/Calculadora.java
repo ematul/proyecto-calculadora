@@ -13,6 +13,7 @@ package InterfazGrafica;
 public class Calculadora extends javax.swing.JFrame {
 
     String operacion = "";
+    Calculador resolver = new Calculador();
     /**
      * Creates new form Calculadora
      */
@@ -149,6 +150,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jButton14.setText("=");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setText("0");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -379,6 +385,12 @@ public class Calculadora extends javax.swing.JFrame {
         operacion += "Tan(";
         jTextField1.setText(operacion);
     }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        resolver.decomponerCadena(operacion);
+        jTextField1.setText("");
+        jTextField1.setText(String.valueOf(resolver.mostrarResultado()));
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
