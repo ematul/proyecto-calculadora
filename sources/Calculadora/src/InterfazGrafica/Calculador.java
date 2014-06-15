@@ -17,9 +17,8 @@ public class Calculador implements Despliegue{
     
     @Override
     public float mostrarResultado() {
-        //float r = resultado.getResultado();
-        //return r;
-        return 0;
+        float r = resultado.getRespuesta();
+        return r;
     }
 
     @Override
@@ -34,28 +33,34 @@ public class Calculador implements Despliegue{
             int op1 = op.charAt(4);
             resultado.setOperador('s');
             resultado.setOperando(op1);
+            resultado.setOperador('=');
         }
+        else
         if(c == 'C'){
            int op1 = op.charAt(4);
             resultado.setOperador('c');
             resultado.setOperando(op1);
+            resultado.setOperador('=');
         }
+        else
         if(c == 'T'){
             int op1 = op.charAt(4);
             resultado.setOperador('t');
             resultado.setOperando(op1);
+            resultado.setOperador('=');
         }
+        else
         if(c != 'S' && c != 'C' && c != 'T')
         {
             int op1 = c;
             char oper = op.charAt(1);
             int op2 = op.charAt(2);
-            
-            resultado.setOperando(1);
+            resultado.setOperando(op1);
             resultado.setOperador(oper);
             resultado.setOperando(op2);
+            resultado.setOperador('=');
         }
-        
+       
     }
 
     @Override
@@ -65,6 +70,7 @@ public class Calculador implements Despliegue{
 
     @Override
     public String mostrarResultadoHexadecimal() {
+        
         return "";
     }
     

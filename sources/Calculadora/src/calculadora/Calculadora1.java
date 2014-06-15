@@ -6,17 +6,21 @@
 
 package calculadora;
 
+import InterfazGrafica.Calculadora;
+
 /**
  *
  * @author enrique
  */
-public class Calculadora {
+public class Calculadora1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Calculadora c = new Calculadora();
+        c.show();
     }
     
 }

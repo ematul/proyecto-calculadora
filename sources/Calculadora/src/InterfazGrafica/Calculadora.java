@@ -387,6 +387,7 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        operacion += "=";
         resolver.decomponerCadena(operacion);
         jTextField1.setText("");
         jTextField1.setText(String.valueOf(resolver.mostrarResultado()));
