@@ -10,28 +10,16 @@ package calculadora;
  *
  * @author Lòpez
  */
-public class Basicas extends AbstractOperador {
+public class Division extends AbstractOperador  {
 
     @Override
     public Double operar(Double op1, Double op2) {
-       
         Double resultado = null;
-        
-        if(Operador == '+')
-        {
-            resultado = op1 + op2;
-        }
-        if(Operador == '-')
-        {
-            resultado = op1 - op2;
-        }
-        if(Operador == '*')
-        {
-            resultado = op1 * op2;
-        }        
+        if(op2!=0)
+        {resultado = op1 / op2;}
         return resultado; //To change body of generated methods, choose Tools | Templates.
     }
-
-   
+    
+    
     
 }
