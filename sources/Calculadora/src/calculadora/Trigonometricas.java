@@ -13,7 +13,7 @@ package calculadora;
 public class Trigonometricas extends AbstractOperador{
      
     public Double operar(float op1, float op2) {
-        Double resultado = 0.00;
+        Double resultado = 0.0;
         if(Operador == 's')
         {
             resultado = Math.sin(op1);
