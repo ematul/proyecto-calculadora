@@ -6,6 +6,8 @@
 
 package InterfazGrafica;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gerson
@@ -19,7 +21,9 @@ public class Calculadora extends javax.swing.JFrame {
      */
     public Calculadora() {
         initComponents();
+        jTextField1.setEnabled(false);
         jTextField1.setText("0");
+        JOptionPane.showMessageDialog(null, "Calculadora Basica> \r\nSolo permite operaciones de un digito ej>\r\n1+1, Sin(7");
     }
 
     /**
@@ -386,11 +390,13 @@ public class Calculadora extends javax.swing.JFrame {
         jTextField1.setText(operacion);
     }//GEN-LAST:event_jButton19ActionPerformed
 
+    Despliegue a;
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         operacion += "=";
         resolver.decomponerCadena(operacion);
         jTextField1.setText("");
-        jTextField1.setText(String.valueOf(resolver.mostrarResultado()));
+        jTextField1.setText("R/ "+String.valueOf(resolver.mostrarResultado()));
+        operacion = "";
     }//GEN-LAST:event_jButton14ActionPerformed
 
     /**

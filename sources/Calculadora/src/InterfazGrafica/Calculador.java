@@ -16,8 +16,8 @@ public class Calculador implements Despliegue{
     Resultado resultado = new  Resultado();
     
     @Override
-    public float mostrarResultado() {
-        float r = resultado.getRespuesta();
+    public double mostrarResultado() {
+        double r = resultado.getRespuesta();
         return r;
     }
 
@@ -29,36 +29,44 @@ public class Calculador implements Despliegue{
     @Override
     public void decomponerCadena(String op) {
         char c = op.charAt(0);
+        char c2 = op.charAt(1);
         if(c == 'S'){
-            int op1 = op.charAt(4);
-            resultado.setOperador('s');
+            double op1 = op.charAt(4);
             resultado.setOperando(op1);
+            resultado.setOperador('s');
             resultado.setOperador('=');
         }
         else
         if(c == 'C'){
-           int op1 = op.charAt(4);
+            double op1 = op.charAt(4);
             resultado.setOperador('c');
             resultado.setOperando(op1);
             resultado.setOperador('=');
         }
         else
         if(c == 'T'){
-            int op1 = op.charAt(4);
+            double op1 = op.charAt(4);
             resultado.setOperador('t');
             resultado.setOperando(op1);
             resultado.setOperador('=');
         }
         else
-        if(c != 'S' && c != 'C' && c != 'T')
+        if(c != 'S' && c != 'C' && c != 'T' && c2 != '=')
         {
-            int op1 = c;
+            double op1 = c;
             char oper = op.charAt(1);
-            int op2 = op.charAt(2);
+            double op2 = op.charAt(2);
             resultado.setOperando(op1);
             resultado.setOperador(oper);
             resultado.setOperando(op2);
             resultado.setOperador('=');
+        }
+        else
+        if(c != 'S' && c != 'C' && c != 'T' && c2 == '='){
+           double op1 = c;
+           char q = c2;
+           resultado.setOperando(op1);
+           resultado.setOperador(q);
         }
        
     }
