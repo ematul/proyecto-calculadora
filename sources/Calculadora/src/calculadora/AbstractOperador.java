@@ -19,8 +19,8 @@ public abstract class AbstractOperador implements Operador {
     }
     
     @Override
-    public float operar(float op1, float op2) {
-        return 0.0f;
+    public Double operar(Double op1, Double op2) {
+        return 0.0;
     }
     
 }

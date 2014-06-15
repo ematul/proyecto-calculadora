@@ -12,6 +12,6 @@ package calculadora;
  */
 public interface Operador {
     
-    public float operar(float op1,float op2);
+    public Double operar(Double op1,Double op2);
     
 }
