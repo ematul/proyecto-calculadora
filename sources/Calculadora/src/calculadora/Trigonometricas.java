@@ -12,19 +12,19 @@ package calculadora;
  */
 public class Trigonometricas extends AbstractOperador{
      
-    public float operar(float op1, float op2) {
-        float resultado = 0;
+    public Double operar(float op1, float op2) {
+        Double resultado = 0.00;
         if(Operador == 's')
         {
-            resultado = (float) Math.sin(op1);
+            resultado = Math.sin(op1);
         }
         if(Operador == 'c')
         {
-            resultado = (float) Math.cos(op1);
+            resultado = Math.cos(op1);
         }
         if(Operador == 't')
         {
-            resultado = (float) Math.tan(op1);
+            resultado = Math.tan(op1);
         }
         return resultado;
      }
