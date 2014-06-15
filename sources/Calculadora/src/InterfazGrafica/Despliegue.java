@@ -12,7 +12,7 @@ package InterfazGrafica;
  */
 public interface Despliegue {
     
-    public float mostrarResultado();
+    public double mostrarResultado();
     
     public void obtenerOperacion(float opcion1, float opcion2);
     
