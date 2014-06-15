@@ -56,7 +56,7 @@ public class Resultado {
             operacion = new Division();
             operacion.setOperador(c);
         }
-        else if(c=='c'&& c=='s')
+        else if(c=='c'|| c=='s')
         {
             //Instancia Trigonometricas
             operacion = new Trigonometricas();
