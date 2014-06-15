@@ -31,21 +31,21 @@ public class Calculador implements Despliegue{
         char c = op.charAt(0);
         char c2 = op.charAt(1);
         if(c == 'S'){
-            double op1 = op.charAt(4);
+            double op1 = op.charAt(4)-48;
             resultado.setOperando(op1);
             resultado.setOperador('s');
             resultado.setOperador('=');
         }
         else
         if(c == 'C'){
-            double op1 = op.charAt(4);
+            double op1 = op.charAt(4)-48;
             resultado.setOperador('c');
             resultado.setOperando(op1);
             resultado.setOperador('=');
         }
         else
         if(c == 'T'){
-            double op1 = op.charAt(4);
+            double op1 = op.charAt(4)-48;
             resultado.setOperador('t');
             resultado.setOperando(op1);
             resultado.setOperador('=');
@@ -53,20 +53,20 @@ public class Calculador implements Despliegue{
         else
         if(c != 'S' && c != 'C' && c != 'T' && c2 != '=')
         {
-            double op1 = c;
+            double op1 = c-48;
             char oper = op.charAt(1);
-            double op2 = op.charAt(2);
+            double op2 = op.charAt(2)-48;
             resultado.setOperando(op1);
-            resultado.setOperador(oper);
             resultado.setOperando(op2);
+            resultado.setOperador(oper);
             resultado.setOperador('=');
         }
         else
         if(c != 'S' && c != 'C' && c != 'T' && c2 == '='){
-           double op1 = c;
+           double op1 = c-48;
            char q = c2;
            resultado.setOperando(op1);
-           resultado.setOperador(q);
+           resultado.setOperador('=');
         }
        
     }
