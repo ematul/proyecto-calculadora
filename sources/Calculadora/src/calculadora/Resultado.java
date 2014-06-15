@@ -12,22 +12,22 @@ package calculadora;
  */
 public class Resultado {
     
-    private float respuesta;
-    private float operando;
+    private Double respuesta;
+    private Double operando;
     private Operador operacion;
     private Boolean bandera;
 
     public Resultado() {
-        this.respuesta = 0.0f;
+        this.respuesta = 0.0;
         bandera = false;
     }
     
-    public float getRespuesta()
+    public Double getRespuesta()
     {
-        return this.respuesta;
+        return null;
     }        
     
-    public void setOperando(float op)
+    public void setOperando(Double op)
     {
         if(!bandera)
         {
