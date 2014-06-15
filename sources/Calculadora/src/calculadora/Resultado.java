@@ -24,7 +24,7 @@ public class Resultado {
     
     public Double getRespuesta()
     {
-        return null;
+        return this.respuesta;
     }        
     
     public void setOperando(Double op)
@@ -46,29 +46,31 @@ public class Resultado {
         if(c=='+' || c=='-' || c=='*')
         {
             //Instancia Operación Basica
-            //operacion = new OperacionBasica();
-            //operacion.setOperando(c);
+            operacion = new Basicas();
+            operacion.setOperador(c);
+            
         }
         else if(c=='/')
         {
             //Instancia Operacion Division
-            //operacion = new Division();
-            //operacion.setOperando(c);
+            operacion = new Division();
+            operacion.setOperador(c);
         }
         else if(c=='c'&& c=='s')
         {
             //Instancia Trigonometricas
-            //operacion = new Trigonometricas();
-            //operacion.setOperando(c);
+            operacion = new Trigonometricas();
+            operacion.setOperador(c);
         }
         else if(c=='t')
         {
             //instancia operacion Tangente
-            //operacion = new Tangente();
-            //operacion.setOperando(c);
+            operacion = new Trigonometricas();
+            operacion.setOperador(c);
         }
         else if (c=='=')
         {
+            
             this.respuesta = operacion.operar(this.respuesta, this.operando);
         }
         

@@ -13,5 +13,6 @@ package calculadora;
 public interface Operador {
     
     public Double operar(Double op1,Double op2);
+    public void setOperador(char Operador);
     
 }

@@ -14,13 +14,13 @@ public abstract class AbstractOperador implements Operador {
 
     char Operador;
 
-    public void setOperador(char Operador) {
-        this.Operador = Operador;
-    }
-    
     @Override
     public Double operar(Double op1, Double op2) {
         return 0.0;
     }
-    
+
+    @Override
+    public void setOperador(char Operador) {
+        this.Operador = Operador;
+    }
 }

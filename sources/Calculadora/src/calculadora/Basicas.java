@@ -32,6 +32,10 @@ public class Basicas extends AbstractOperador {
         return resultado; //To change body of generated methods, choose Tools | Templates.
     }
 
-   
+    @Override
+    public void setOperador(char Operador) {
+        this.Operador = Operador;
+    }
+
     
 }

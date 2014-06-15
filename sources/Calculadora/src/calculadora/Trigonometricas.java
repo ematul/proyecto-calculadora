@@ -8,11 +8,14 @@ package calculadora;
 
 /**
  *
- * @author Equipo
+ * @author enrique
  */
 public class Trigonometricas extends AbstractOperador{
-     
-    public Double operar(float op1, float op2) {
+
+
+
+    @Override
+    public Double operar(Double op1, Double op2) {
         Double resultado = 0.0;
         if(Operador == 's')
         {
@@ -27,5 +30,13 @@ public class Trigonometricas extends AbstractOperador{
             resultado = Math.tan(op1);
         }
         return resultado;
-     }
+    }
+    
+    @Override
+    public void setOperador(char Operador) {
+        this.Operador = Operador;
+    }
+    
+    
+    
 }
